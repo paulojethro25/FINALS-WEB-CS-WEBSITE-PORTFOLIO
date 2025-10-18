@@ -265,74 +265,254 @@ footer p a {
 #in-touch a {
   color: #00e6e6;
 }
-
-/* ===== TABLET VIEW ===== */
-@media (max-width: 1024px) {
-  header {
-    padding: 20px 30px;
+/* MOBILE VIEWPORT */
+@media screen and (max-width: 480px){
+   #links ul {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 9999px; /* makes it fully pill-shaped */
+    width: 90%;
+    margin: 15px auto;
+    list-style: none;
   }
 
+  #links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  #links ul li a:hover {
+    color: #00e6e6;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
   #intro {
-    flex-direction: column;
+    flex-direction: column;        /* stack text + image vertically */
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 60px 50px;
+    padding: 40px 20px;            /* smaller padding */
+    gap: 20px;                     /* space between text & image */
   }
 
   .intro-text {
-    padding-left: 0;
+    padding-left: 0;               /* remove huge left padding */
   }
 
   .image-wrapper {
-    padding: 2rem 0 0 0;
+    padding-right: 0;              /* remove right padding */
+  }
+
+  #intro img {
+    width: 150px;
+    height: 150px;
+    border-radius: 1rem;
   }
 
   #about {
-    padding: 50px 50px;
+    padding: 40px 20px;
+    text-align: center;
   }
 
   #about h1 {
     padding-left: 0;
-    text-align: center;
   }
 
   #about p {
     padding-left: 0;
-    text-align: center;
+    max-width: 100%;
   }
 
   .container1 {
-    grid-template-columns: repeat(2, 10rem);
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column */
+    justify-items: center;      /* center each box horizontally */
+    gap: 20px;                  /* space between boxes */
   }
 
-  .project-container-python,
-  .project-container-java {
-    grid-template-columns: repeat(2, 20rem);
-    gap: 4rem;
+  .box {
+    width: 80%;  /* optional: keeps boxes neat and centered */
+    text-align: center;
   }
+
+  .box img {
+    width: 100px; /* adjust as you like */
+    height: auto;
+  }
+
+   /* PYTHON projects */
+  .project-container-python {
+    display: grid;
+    grid-template-columns: 1fr;  /* 1 column only */
+    justify-items: center;       /* center each project horizontally */
+    gap: 20px;                   /* space between projects */
+  }
+
+  /* JAVA projects */
+  .project-container-java {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+  }
+
+  /* project boxes (optional styling for neatness) */
+.project-box,
+.project-box2 {
+  width: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* stack image + text vertically */
+  align-items: center;    /* center both horizontally */
+  justify-content: center;/* optional: centers content vertically */
 }
 
-/* ===== MOBILE VIEW ===== */
 
-@media (max-width: 767px) {
+  .project-box img,
+  .project-box2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* optional: make thumbnails look nicer */
+  }
+}
+/* MID PHONES / SMALL TABLETS VIEWPORT */
+@media screen and (min-width: 481px) and (max-width: 629px) {
+
+  /* NAVIGATION */
   header {
-    padding: 15px 20px;
+    display: flex;
     justify-content: center;
   }
 
   #links ul {
-    flex-direction: column;
-    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 12px 45px;
+    border-radius: 100px;
+    width: 95%;
+    margin: 15px auto;
+    list-style: none;
+  }
+
+  #links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  /* SKILLS GRID */
+  .container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns now fit nicely */
+    justify-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .box {
+    width: 80%;
     text-align: center;
   }
 
-  #intro {
-    flex-direction: column;
-    padding: 40px 20px;
+  /* PROJECTS GRIDS */
+  .project-container-python,
+  .project-container-java {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns per row */
+    justify-items: center;
+    gap: 20px;
+    padding: 20px;
   }
 
-  #intro h1 {
-    font-size: 1.5rem;
+  .project-box,
+  .project-box2 {
+    width: 85%;
+    text-align: center;
+  }
+
+  /* INTRO + ABOUT */
+  #intro {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 40px;
+    text-align: center;
+  }
+
+  .intro-text {
+    padding: 0;
+  }
+
+  .image-wrapper {
+    padding: 1rem;
+  }
+
+  #about {
+    padding: 40px;
+  }
+
+  #about h1 {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  #about p {
+    padding-left: 0;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+
+/* TABLET VIEWPORT */
+@media screen and (min-width: 630px) and (max-width: 1024px){
+  /* NAVIGATION */
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  #links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px; /* more breathing room between items */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 60px; /* longer and thicker pill */
+    border-radius: 100px; /* smoother, wider curve */
+    width: 90%; /* takes up most of the screen width */
+    max-width: 800px; /* limits so it doesn’t stretch too much */
+    margin: 20px auto;
+    list-style: none;
+  }
+
+  #links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+
+  #links ul li a:hover {
+    color: #00e6e6;
+  }
+
+  /* INTRO SECTION */
+  #intro {
+    display: flex;
+    flex-direction: row; /* side by side */
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 60px 50px;
   }
 
   .intro-text {
@@ -342,66 +522,34 @@ footer p a {
 
   .image-wrapper {
     padding-right: 0;
-    margin-top: 2rem;
   }
 
   #intro img {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
+    border-radius: 1rem;
   }
 
+  /* ABOUT SECTION */
   #about {
-    padding: 40px 20px;
+    padding: 60px 60px;
   }
 
   #about h1 {
     padding-left: 0;
     text-align: center;
-    font-size: 1.2rem;
   }
 
   #about p {
-    padding-left: 0;
-    font-size: 0.85rem;
-    text-align: center;
-  }
-
-  .container1 {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  /* ===== Projects: single column on mobile ===== */
-  .project-container-python,
-  .project-container-java {
-    display: grid;
-    grid-template-columns: 1fr;   /* one column layout */
-    grid-template-rows: auto;
-    gap: 2rem;
-    justify-items: center;       /* center boxes horizontally */
-  }
-
-  .project-box, .project-box2 {
-    width: 90%;
-    height: auto;
+    max-width: 700px;
     margin: 0 auto;
-  }
-
-  #skills, #projects {
-    font-size: 1.5rem;
-  }
-
-  #portfolio-h1, #key-skills h2, #in-touch h2 {
-    text-align: center;
     padding-left: 0;
+    text-align: justify;
   }
 
-  .skills-list {
-    padding-left: 2rem;
-  }
-
-  #in-touch p, #email {
-    padding-left: 0;
+  /* FOOTER */
+  footer {
     text-align: center;
+    font-size: 0.8rem;
   }
 }
