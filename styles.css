@@ -133,12 +133,17 @@ main #about{
 }
 
 /* end of main csss */
-footer p{
+footer {
+  margin: 0;     /* no extra vertical spacing */
+}
+footer p {
   background-color: #778da9;
   text-align: center;
   padding: 1rem;
   color: whitesmoke;
+  margin: 0;     /* make sure <p> has no extra margin */
 }
+
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -272,3 +277,45 @@ footer p{
   color: whitesmoke;
 }
 /* ==== end of projects css ==== */
+/* ==== start of portfolio css ==== */
+#portfolio-h1 h1{
+  font-family: 'Krona One', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 0 2rem 0;
+  color: whitesmoke;
+}
+#intro-portfolio{
+  font-size: 1.5rem;
+  padding: 0 10rem 2rem 10rem;
+  text-align: justify;
+}
+#key-skills h2{
+  font-family: 'Krona One', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 0 2rem 0;
+  color: whitesmoke;
+}
+#key-skills ul{
+  text-align: justify;
+  padding: 0 35rem 0 35rem;
+  font-size: 1.5rem;
+}
+#contact h2{
+  font-family: 'Krona One', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 0 2rem 0;
+  color: whitesmoke;
+}
+#contact p{
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+#contact a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+/* ==== end of portfolio css ==== */
