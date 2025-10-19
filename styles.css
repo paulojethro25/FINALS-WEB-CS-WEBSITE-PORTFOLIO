@@ -37,6 +37,7 @@ body, html {
   transition: transform 0.25s ease, background-color 0.25s ease;
   border: 2px solid whitesmoke;
   font-weight: bold;
+  font-family: 'Keania One', sans-serif;
 }
 
 #links a:hover {
