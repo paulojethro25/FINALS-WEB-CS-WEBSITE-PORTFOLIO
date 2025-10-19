@@ -4,13 +4,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
-  /* background-color: #464646;; */
+header, main {
+  display: block;
 }
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 /* start of nav css */
 #links {
-  background: #07ffff;
-  padding-top: 2rem;
+  /* background-color: rgba(0, 0, 0, 0.15); */
+  padding: 2rem 0 2rem 0;
 }
 
 #links ul {
@@ -39,16 +44,24 @@ html{
   transform: scale(1.1);
 }
 /* end of nav css */
+body {
+  background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77, #778da9, #e0e1dd);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+  margin: 0;
+  padding: 0;
+}
+
 /* start of main css */
 main #intro{
-  background: linear-gradient(360deg, #222222 60%, #07ffff 100%);
+  /* background: rgba(0, 0, 0, 0.1);  */
   padding: 10rem 10rem 7.5rem 12rem;
 }
 .intro-text{
   padding-left: 5rem;
 }
 .intro-text h1{
-  color: #07ffff;
+  color: black;
   font-size: 2rem;
 }
 .intro-text span{
@@ -65,7 +78,7 @@ main #intro{
 
 .intro-text h3 a {
   display: inline-block; /* ✅ required for scale to work cleanly */
-  border: 2px solid #07ffff;
+  border: 2px solid whitesmoke;
   padding: 0.5rem 1rem;
   border-radius: 0.75rem;
   color: whitesmoke;
@@ -89,7 +102,7 @@ main #intro{
   border: 2px solid black;
   width: 15rem;
   height: 15rem;
-  background-color: #07ffff;
+  background-color: black;
   border-radius: 2.5rem;
 }
 
@@ -99,12 +112,11 @@ main #intro{
 }
 /* === start of about css === */
 main #about{
-  background: linear-gradient(360deg, #464646 35%, #222222 100%);
-  /* background-color: #424242; */
+  background: rgba(0, 0, 0, 0.25);
   padding: 5rem 0 7.5rem 2rem;
 }
 #about h1{
-  color: #07ffff;
+  color: black;
   font-size: 2rem;
   padding: 0 0 1rem 12.5rem;
 }
@@ -116,9 +128,14 @@ main #about{
 }
 
 /* end of main csss */
-footer{
-  background-color: #222222;
+footer p{
+  background-color: #778da9;
   text-align: center;
   padding: 1rem;
   color: whitesmoke;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
