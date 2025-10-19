@@ -100,18 +100,19 @@ main #intro{
   right: 0;
   transform: translateY(-50%);
   top: 17.5rem;
-  right: 20rem;
+  right: 18rem;
   /* below this are just place holder for the image remove when image is available */
-  border: 2px solid black;
+  /* border: 2px solid black;
   width: 15rem;
   height: 15rem;
   background-color: black;
-  border-radius: 2.5rem;
+  border-radius: 2.5rem; */
 }
 
 .image-wrapper img {
   width: 300px;
   height: auto;
+  border-radius: 2rem;
 }
 /* === start of about css === */
 main #about{
