@@ -139,3 +139,34 @@ footer p{
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+/* ====== start of skills page css ======= */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding: 2rem;
+  width: 10rem;
+  max-width: 1000px;
+  margin: 0 auto; /* centers the grid horizontally */
+}
+
+.skills-container .box {
+  background: linear-gradient(135deg, #1b263b, #415a77);
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-container .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(7, 255, 255, 0.5);
+}
+
+.skills
+
+
+
