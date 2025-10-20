@@ -287,8 +287,13 @@ footer p {
 }
 #intro-portfolio{
   font-size: 1.5rem;
-  padding: 0 10rem 2rem 10rem;
+  padding: 0 16rem 2rem 16rem;
   text-align: justify;
+  color: whitesmoke;
+  font-family: 'Krona One', sans-serif;
+}
+#key-skills{
+  background: rgba(0, 0, 0, 0.25);
 }
 #key-skills h2{
   font-family: 'Krona One', sans-serif;
@@ -301,6 +306,11 @@ footer p {
   text-align: justify;
   padding: 0 35rem 0 35rem;
   font-size: 1.5rem;
+  color: whitesmoke;
+  font-family: 'Keania One', sans-serif;
+}
+#contact{
+  background: rgba(0, 0, 0, 0.25);
 }
 #contact h2{
   font-family: 'Krona One', sans-serif;
@@ -313,6 +323,8 @@ footer p {
   text-align: center;
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
+  font-weight: bold;
+  font-family: 'Keania One', sans-serif;
 }
 #contact a{
   text-decoration: none;
