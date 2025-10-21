@@ -523,6 +523,76 @@ footer {
   }
 }
 
+/* ==== HAMBURGER MENU ==== */
+
+/* Default (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: whitesmoke;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ==== MOBILE & TABLET VIEW ==== */
+@media (max-width: 1200px) {
+  /* Hide normal nav until menu toggled */
+  #links ul {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* Show when active */
+  #links ul.active {
+    right: 0;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  #links a {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid whitesmoke;
+  }
+}
 
 
 
